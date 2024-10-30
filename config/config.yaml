@@ -1,1 +1,21 @@
-'twitter_api': ''
+# Config file for API keys, hashtags, sources, and parameters
+
+# Twitter API credentials
+twitter:
+  api_key: ""
+  api_secret_key: ""
+  access_token: ""
+  access_token_secret: ""
+
+# General settings
+scrape_period_days: 7  # Number of days back from today to scrape data
+
+# Twitter settings
+twitter_settings:
+  hashtags: ["#Trending", "#News"]  # Hashtags to analyze
+
+# News sources (only needed if using newspaper3k or similar tools without date filtering)
+news_sources:
+  urls:
+    - "https://www.bbc.com"
+    - "https://www.cnn.com"
