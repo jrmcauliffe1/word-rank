@@ -1,0 +1,7 @@
+newspaper3k
+tweepy
+pandas
+nltk
+spacy
+matplotlib
+wordcloud
