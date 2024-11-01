@@ -7,18 +7,21 @@ from scripts.analyze_trends import analyze_data
 from scripts.visualize_trends import visualize_trends
 
 def main():
-    # Step 1: Scrape data
+    # Scrape news articles
     print("Scraping news articles...")
     news_sources = ["https://www.bbc.com", "https://www.cnn.com"]
     news_df = scrape_news(news_sources)
+    # data frame function .to_csv
     news_df.to_csv("data/raw_news/news_data.csv", index=False)
 
+    # Scrape tweets
     print("Scraping Twitter data...")
     hashtags = ["#Trending", "#News"]
     tweet_df = scrape_twitter_trending(hashtags)
+    # data frame function
     tweet_df.to_csv("data/raw_tweets/tweet_data.csv", index=False)
 
-    # Step 2: Process data
+    # Process data
     print("Processing data...")
     processed_news = process_data(news_df)
     processed_tweets = process_data(tweet_df)
